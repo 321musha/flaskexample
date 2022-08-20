@@ -23,7 +23,7 @@ def searchbyreg(pattern):
         return list(di.keys())
 
     di.clear()
-    
+
 from flask import Flask, render_template, request
 
 application=Flask(__name__)
@@ -45,4 +45,5 @@ def matchwith(pattern):
     except ValueError:
         return "недействительный ввод"
 
-application.run(debug=True)
+if __name__=='__main__':
+    application.run(debug=True)
